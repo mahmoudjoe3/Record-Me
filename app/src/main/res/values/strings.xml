@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Record  Me</string>
+    <string name="record_hint">Click the record button<br/>to start recording…</string>
+    <string name="recording_file_name">Recording File Name:<br/> </string>
+</resources>

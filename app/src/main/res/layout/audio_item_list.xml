@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="?actionBarSize">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_item"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="6dp"
+        android:layout_marginBottom="2dp"
+        app:cardCornerRadius="3dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/ripple">
+
+            <ImageButton
+                android:id="@+id/playAudio"
+                android:layout_width="?actionBarSize"
+                android:layout_height="match_parent"
+                android:background="@drawable/ripple"
+                android:padding="10dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic__play_circle"
+                android:tag="0" />
+
+            <TextView
+                android:id="@+id/audio_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="15dp"
+                android:layout_toStartOf="@id/audio_created_date"
+                android:layout_toEndOf="@id/playAudio"
+                android:maxLength="25"
+                android:textColor="@color/black"
+                android:maxLines="1"
+                android:textAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Subtitle"
+                tools:text="record 1" />
+
+            <TextView
+                android:id="@+id/audio_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/audio_name"
+                android:layout_toEndOf="@id/playAudio"
+                android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                android:textSize="12sp"
+                tools:text="03:30" />
+
+            <TextView
+                android:id="@+id/audio_created_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="7dp"
+                android:layout_marginEnd="10dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                android:textSize="13sp"
+                tools:text="12 hours ago" />
+
+            <TextView
+                android:id="@+id/audio_size"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/audio_created_date"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="10dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                android:textSize="12sp"
+                tools:text="200 KB" />
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/checkView"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_alignParentEnd="true"
+        android:visibility="gone"
+        app:cardBackgroundColor="@color/black"
+        app:cardCornerRadius="16dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:padding="2dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_checked" />
+    </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>
